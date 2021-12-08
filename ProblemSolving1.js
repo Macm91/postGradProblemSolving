@@ -18,9 +18,10 @@ reverseString("hello")
 //a.	Write code that takes a string as input and capitalize the first letter of each word. 
 //Words will be separated by only one space. i.e. “hello world” should be outputted as “Hello World”
 
-let finalPhrase = '';
+
 
 function capitalize(x){
+    let finalPhrase = '';
     for (let i = 0; i<x.length; i++){
         if (i==0){
             finalPhrase += (x[i].toUpperCase())
@@ -38,3 +39,24 @@ function capitalize(x){
 }
 
 capitalize("hello world")
+capitalize("test test")
+
+
+// 3.	Compress a string of characters
+//For example, an input of "aaabbbbbccccaacccbbbaaabbbaaa"
+// would compress to "3a5b4c2a3c3b3a3b3a"
+
+function compress(x){
+    let compressed = '';
+    
+    for (let i = 0; i<x.length; i++){
+        let count = 1
+        for(let j = 0; j<x.length; j++ ){
+            if (x[i] === x[j]){
+                count++
+            }
+            
+        }
+    }
+
+}
