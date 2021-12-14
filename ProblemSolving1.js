@@ -2,9 +2,10 @@
 
 // 1.	Reverse a string
 
-let output = ' ';
+
 
 function reverseString(str){
+    let output = ' ';
     for (let i=str.length-1; i>=0 ; i--){
        output += str[i]
     }
@@ -49,7 +50,6 @@ capitalize("test test")
 function compress(x){
     let compressed = '';
     let count = 0
-    debugger
     for (let i = 0; i<x.length; i++){
         for(let j = 0; j<x.length; j++ ){
             if (x[i] === x[j]){
@@ -105,8 +105,25 @@ function subsetA(arr) {
 
 subsetA(array)
 
-
-
+//EXTRA
+//HackerRanker problem
 //write a Degree of an Array where you intake an array. 
 //in the array you find the most frequent numbers (deg. of array)
 //find length of the shortest sub array that shares that degree. 
+
+
+// 4.	BONUS CHALLENGE: Palindrome
+// a.	A word, phrase, or sequence that reads the same 
+// backward as forward i.e. madam
+// b.	Write code that takes a user input and checks to
+//  see if it is a Palindrome and reports the result
+
+
+function Palindrome(w){
+    let pal = reverseString(w)
+    if (pal === w){
+        console.log(w)
+    }
+}
+
+Palindrome("madam")
