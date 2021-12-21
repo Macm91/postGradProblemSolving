@@ -129,16 +129,9 @@ function Palindrome(w){
 Palindrome("madam")
 
 
-// 5.	Happy Numbers
-// a.	https://en.wikipedia.org/wiki/Happy_number
-// b.	A happy number is a number defined by the following
-//  process: starting with any positive integer, 
-//  replace the number by the sum of the squares of its digits, 
-//  and repeat the process until the number equals 
-//  1. An example of a happy number is 19
-// c.	Write a method that determines if a number is happy or sad
 
 
+//Problem from an assessment on HackerRanker.
 
 function reverseString(x){
     let output = '';
@@ -196,3 +189,14 @@ function mode(x){
 }
 
 mode ([1,1,1,3,5,7,2,3,1])
+
+
+
+// 5.	Happy Numbers
+// a.	https://en.wikipedia.org/wiki/Happy_number
+// b.	A happy number is a number defined by the following
+//  process: starting with any positive integer, 
+//  replace the number by the sum of the squares of its digits, 
+//  and repeat the process until the number equals 
+//  1. An example of a happy number is 19
+// c.	Write a method that determines if a number is happy or sad
