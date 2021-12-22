@@ -147,7 +147,7 @@ function eliminateDeletedCharacter(x){
     let output = '';
     let backspaces = 0
     
-    debugger
+   
     //if # , backspace +1. Then it hits the next value and it goes to see if it's #. If not AND backspace == 0, then it should add to output. IF Backspace != 0, then it should change i to +by backspaces
     for (let i = 0; i <= x.length; i++){
         if ( x[i] === "#"){
@@ -200,3 +200,32 @@ mode ([1,1,1,3,5,7,2,3,1])
 //  and repeat the process until the number equals 
 //  1. An example of a happy number is 19
 // c.	Write a method that determines if a number is happy or sad
+
+
+//13 = 1^2 + 3^2 --> 10 = 1^2 --> 1
+
+
+function happyNumbers(x){
+   
+}
+
+
+
+
+
+// happyNumbers(13);
+
+sumOfSquareNumbers(13)
+
+function sumOfSquareNumbers (aNumber){
+    debugger
+    let strANumber= aNumber.toString().split('');
+    let arrSquaredSum= 0 
+    for ( let i=0; i<strANumber.length; i++){
+        let number= parseInt(strANumber[i])
+        let squared = (number * number);
+        arrSquaredSum += squared;
+    }
+    console.log (arrSquaredSum)
+}
+
