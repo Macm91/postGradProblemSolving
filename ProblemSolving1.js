@@ -206,19 +206,32 @@ mode ([1,1,1,3,5,7,2,3,1])
 
 
 function happyNumbers(x){
-   
+   let number = x;
+    let count = 0;
+
+   while (count < 50 && number != 1){
+        let newNumber = sumOfSquareNumbers(number);
+        if (newNumber === 1){
+            console.log( x, "is a happy number")
+            break;
+        }
+        else{
+        count++;
+        number = newNumber;
+        }
+    }
+    
 }
 
 
 
 
+happyNumbers(14);
+happyNumbers(19);
 
-// happyNumbers(13);
 
-sumOfSquareNumbers(13)
 
 function sumOfSquareNumbers (aNumber){
-    debugger
     let strANumber= aNumber.toString().split('');
     let arrSquaredSum= 0 
     for ( let i=0; i<strANumber.length; i++){
@@ -226,6 +239,6 @@ function sumOfSquareNumbers (aNumber){
         let squared = (number * number);
         arrSquaredSum += squared;
     }
-    console.log (arrSquaredSum)
+    return(arrSquaredSum);
 }
 
