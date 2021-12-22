@@ -215,18 +215,21 @@ function happyNumbers(x){
             console.log( x, "is a happy number")
             break;
         }
+        else if (count === 49 && number != 1){
+            count++
+            console.log (x, "is an unhappy number")
+        }
         else{
         count++;
         number = newNumber;
         }
     }
-    
 }
 
 
 
 
-happyNumbers(14);
+happyNumbers(1654);
 happyNumbers(19);
 
 
