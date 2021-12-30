@@ -252,7 +252,6 @@ happyNumbers(19);
 
 
 function primeNumber(num){
-    debugger
     let divisibleNumbers = 0;
     let divisor = 1;
     
@@ -283,3 +282,27 @@ primeNumber(4);
 primeNumber(524287);
 
 
+// 7.	Fibonacci
+// a.	A series of numbers in which each number (Fibonacci number) is the sum of the two preceding numbers. The simplest is the series 1, 1, 2, 3, 5, 8, etc.
+// b.	Write a method that does the Fibonacci sequence starting at 1
+// c.	HARDER VERSION: Write a method that does the Fibonacci sequence starting at a number that a user inputs
+
+function Fibonacci(num){
+    let sequence = [];
+
+    while (sequence.length < 50){
+        if (sequence.length == 0){
+            sequence.push(num)
+            sequence.push(num)
+        } 
+        else {
+            let lastNumber = sequence[sequence.length-1];
+            let secondToLastNumber = sequence[sequence.length-2];
+            let newNumber = lastNumber + secondToLastNumber;
+            sequence.push(newNumber)
+        }
+    }
+    console.log(sequence)
+}
+
+Fibonacci(6)
