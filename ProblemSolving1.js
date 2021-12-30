@@ -227,13 +227,6 @@ function happyNumbers(x){
 }
 
 
-
-
-happyNumbers(1654);
-happyNumbers(19);
-
-
-
 function sumOfSquareNumbers (aNumber){
     let strANumber= aNumber.toString().split('');
     let arrSquaredSum= 0 
@@ -244,4 +237,49 @@ function sumOfSquareNumbers (aNumber){
     }
     return(arrSquaredSum);
 }
+
+
+happyNumbers(1654);
+happyNumbers(19);
+
+
+
+// 6.	Prime Numbers
+// a.	A prime number is a number that is only divisible by one and itself.
+// b.	Write a method that prints out all prime numbers between 1 and 100 
+
+//524,287 is largest prime number
+
+
+function primeNumber(num){
+    debugger
+    let divisibleNumbers = 0;
+    let divisor = 1;
+    
+    while (divisor < 21){
+        if (num > 20 && divisibleNumbers == 0){
+            divisibleNumbers++;
+        }
+        else if(num % divisor == 0 ){
+            divisibleNumbers++
+            divisor ++
+        }
+        else{
+            divisor ++
+        }
+    }
+    
+    if (divisibleNumbers < 3){
+        console.log(num, "is a prime number")
+    }
+    else{
+        console.log (num, "is not a prime number")
+    }
+    
+}
+
+primeNumber(37);
+primeNumber(4);
+primeNumber(524287);
+
 
