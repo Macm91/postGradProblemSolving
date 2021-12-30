@@ -306,3 +306,27 @@ function Fibonacci(num){
 }
 
 Fibonacci(6)
+
+
+// 8.	Given an array of integers, return indices of the two numbers such 
+//that they add up to a specific target. You may assume that each input 
+//would have exactly one solution, and you may not use the same element twice.
+// a.	Use Case:
+// i.	Given numbers in an array: [5, 17, 77, 50] 
+// ii.	Target: 55
+
+function indicesOFArray(arr, target){
+    for (let i = 0; i < arr.length; i++){
+        for (let j = 0; j<arr.length; i++){
+            if (i==j){
+                break
+            }
+            else if(arr[i] + arr[j] == target){
+                console.log ("the numbers", arr[i], "at index", [i], "and", arr[j], "at index", [j], "equal the target number of", target)
+            }
+        }
+    }
+}
+
+let arrayA = [5, 17, 77, 50] 
+indicesOFArray(arrayA, 55)
