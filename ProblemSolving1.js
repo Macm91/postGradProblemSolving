@@ -1,7 +1,6 @@
 "use strict";
 
 // 1.	Reverse a string
-
 function reverseString(str){
     let output = '';
     for (let i=str.length-1; i>=0 ; i--){
@@ -31,7 +30,6 @@ function capitalize(x){
     }
     console.log(finalPhrase)
 }
-
 // capitalize("hello world")
 // capitalize("test test")
 
@@ -53,7 +51,6 @@ function compress(x){
     }
     console.log(compressed)
 }
-
 // compress("aaabbbcdd")
 
 
@@ -62,7 +59,6 @@ function compress(x){
 
 
 // EXTRA PROBLEM: Array subsets problem. 
-
 let array = [1,2,3,2,5,6];
 
 
@@ -92,11 +88,9 @@ function subsetA(arr) {
     }
     }
 }
-
 // subsetA(array)
 
 // 4.	BONUS CHALLENGE: Palindrome
-
 function Palindrome(w){
     let pal = reverseString(w)
     if (pal === w){
@@ -107,16 +101,13 @@ function Palindrome(w){
         console.log(w, "is not a palindrome")
     }
 }
-
-Palindrome("hi")
+// Palindrome("hi")
 
 
 
 
 //Problem from an assessment on HackerRanker.
-
 function eliminateDeletedCharacter(x){
-debugger
     let output = '';
     let backspaces = 0
     
@@ -137,8 +128,7 @@ debugger
     }
     console.log (output)
 }
-
-eliminateDeletedCharacter(reverseString("yf#c#"))
+// eliminateDeletedCharacter(reverseString("yf#c#"))
 
 
 function mode(x){
@@ -159,7 +149,6 @@ function mode(x){
     }
     console.log (number)
 }
-
 // mode ([1,1,1,3,5,7,2,3,1])
 
 // 5.	Happy Numbers
@@ -195,8 +184,6 @@ function sumOfSquareNumbers (aNumber){
     }
     return(arrSquaredSum);
 }
-
-
 // happyNumbers(1654);
 // happyNumbers(19);
 
@@ -228,13 +215,11 @@ function primeNumber(num){
     }
     
 }
-
 // primeNumber(37);
 
 
 
 // 7.	Fibonacci
-
 function Fibonacci(num){
     let sequence = [];
 
@@ -252,7 +237,6 @@ function Fibonacci(num){
     }
     console.log(sequence)
 }
-
 // Fibonacci(6)
 
 
@@ -281,18 +265,14 @@ let arrayA = [5, 17, 77, 50]
 
 
 // 9.	Palindrome is a word, phrase, or sequence that reads the same backward as forward 
-// i.e. madam. Write code that takes a user input and checks to see if it is 
-// a Palindrome and reports the result. You must handle spaces. 
+function PalindromeCheck(w){
+    let pal = reverseString(w)
+    if (pal === w){
+        console.log(w, "is a palindrome")
+    }
+    else{
+        (console.log(w, "is NOT a palindrome"))
+    }
+}
 
-
-// function PalindromeCheck(w){
-//     let pal = reverseString(w)
-//     if (pal === w){
-//         console.log(w, "is a palindrome")
-//     }
-//     else{
-//         (console.log(w, "is NOT a palindrome"))
-//     }
-// }
-
-// PalindromeCheck("happy")
+// PalindromeCheck("madam")
