@@ -2,25 +2,18 @@
 
 // 1.	Reverse a string
 
-
-
 function reverseString(str){
-    let output = ' ';
+    let output = '';
     for (let i=str.length-1; i>=0 ; i--){
        output += str[i]
     }
-    console.log(output)
-    
+    return(output)
 }
 
 reverseString("hello")
+reverseString("hi")
 
-// 2. 2.	Capitalize letter
-//a.	Write code that takes a string as input and capitalize the first letter of each word. 
-//Words will be separated by only one space. i.e. “hello world” should be outputted as “Hello World”
-
-
-
+// 2. Capitalize letter
 function capitalize(x){
     let finalPhrase = '';
     for (let i = 0; i<x.length; i++){
@@ -39,14 +32,11 @@ function capitalize(x){
     console.log(finalPhrase)
 }
 
-capitalize("hello world")
-capitalize("test test")
+// capitalize("hello world")
+// capitalize("test test")
 
 
 // 3.	Compress a string of characters
-//For example, an input of "aaabbbbbccccaacccbbbaaabbbaaa"
-// would compress to "3a5b4c2a3c3b3a3b3a"
-
 function compress(x){
     let compressed = '';
     let count = 0
@@ -64,7 +54,7 @@ function compress(x){
     console.log(compressed)
 }
 
-compress("aaabbbcdd")
+// compress("aaabbbcdd")
 
 
 
@@ -103,53 +93,36 @@ function subsetA(arr) {
     }
 }
 
-subsetA(array)
-
-//EXTRA
-//HackerRanker problem
-//write a Degree of an Array where you intake an array. 
-//in the array you find the most frequent numbers (deg. of array)
-//find length of the shortest sub array that shares that degree. 
-
+// subsetA(array)
 
 // 4.	BONUS CHALLENGE: Palindrome
-// a.	A word, phrase, or sequence that reads the same 
-// backward as forward i.e. madam
-// b.	Write code that takes a user input and checks to
-//  see if it is a Palindrome and reports the result
-
 
 function Palindrome(w){
     let pal = reverseString(w)
     if (pal === w){
-        console.log(w)
+        console.log(w, "is a palindrome")
+        return(w)
+    }
+    else{
+        console.log(w, "is not a palindrome")
     }
 }
 
-Palindrome("madam")
+Palindrome("hi")
 
 
 
 
 //Problem from an assessment on HackerRanker.
 
-function reverseString(x){
-    let output = '';
-    for (let i = x.length-1; i>=0; i--){
-        output +=x[i]
-    }
-    return(output)
-}
-
-
-
 function eliminateDeletedCharacter(x){
+debugger
     let output = '';
     let backspaces = 0
     
    
     //if # , backspace +1. Then it hits the next value and it goes to see if it's #. If not AND backspace == 0, then it should add to output. IF Backspace != 0, then it should change i to +by backspaces
-    for (let i = 0; i <= x.length; i++){
+    for (let i = 0; i <= x.length-1; i++){
         if ( x[i] === "#"){
             backspaces += 1
         }
@@ -157,6 +130,7 @@ function eliminateDeletedCharacter(x){
             output += x[i]
         }
         else if (backspaces != 0 && x[i] !=="#"){
+            i += 1
             i += backspaces;
             backspaces = 0
         }
@@ -164,9 +138,7 @@ function eliminateDeletedCharacter(x){
     console.log (output)
 }
 
-eliminateDeletedCharacter( reverseString("yf#c#"))
-
-
+eliminateDeletedCharacter(reverseString("yf#c#"))
 
 
 function mode(x){
@@ -188,23 +160,9 @@ function mode(x){
     console.log (number)
 }
 
-mode ([1,1,1,3,5,7,2,3,1])
-
-
+// mode ([1,1,1,3,5,7,2,3,1])
 
 // 5.	Happy Numbers
-// a.	https://en.wikipedia.org/wiki/Happy_number
-// b.	A happy number is a number defined by the following
-//  process: starting with any positive integer, 
-//  replace the number by the sum of the squares of its digits, 
-//  and repeat the process until the number equals 
-//  1. An example of a happy number is 19
-// c.	Write a method that determines if a number is happy or sad
-
-
-//13 = 1^2 + 3^2 --> 10 = 1^2 --> 1
-
-
 function happyNumbers(x){
    let number = x;
     let count = 0;
@@ -239,18 +197,12 @@ function sumOfSquareNumbers (aNumber){
 }
 
 
-happyNumbers(1654);
-happyNumbers(19);
+// happyNumbers(1654);
+// happyNumbers(19);
 
 
 
 // 6.	Prime Numbers
-// a.	A prime number is a number that is only divisible by one and itself.
-// b.	Write a method that prints out all prime numbers between 1 and 100 
-
-//524,287 is largest prime number
-
-
 function primeNumber(num){
     let divisibleNumbers = 0;
     let divisor = 1;
@@ -277,15 +229,11 @@ function primeNumber(num){
     
 }
 
-primeNumber(37);
-primeNumber(4);
-primeNumber(524287);
+// primeNumber(37);
+
 
 
 // 7.	Fibonacci
-// a.	A series of numbers in which each number (Fibonacci number) is the sum of the two preceding numbers. The simplest is the series 1, 1, 2, 3, 5, 8, etc.
-// b.	Write a method that does the Fibonacci sequence starting at 1
-// c.	HARDER VERSION: Write a method that does the Fibonacci sequence starting at a number that a user inputs
 
 function Fibonacci(num){
     let sequence = [];
@@ -305,7 +253,7 @@ function Fibonacci(num){
     console.log(sequence)
 }
 
-Fibonacci(6)
+// Fibonacci(6)
 
 
 // 8.	Given an array of integers, return indices of the two numbers such 
@@ -329,4 +277,22 @@ function indicesOFArray(arr, target){
 }
 
 let arrayA = [5, 17, 77, 50] 
-indicesOFArray(arrayA, 55)
+// indicesOFArray(arrayA, 55)
+
+
+// 9.	Palindrome is a word, phrase, or sequence that reads the same backward as forward 
+// i.e. madam. Write code that takes a user input and checks to see if it is 
+// a Palindrome and reports the result. You must handle spaces. 
+
+
+// function PalindromeCheck(w){
+//     let pal = reverseString(w)
+//     if (pal === w){
+//         console.log(w, "is a palindrome")
+//     }
+//     else{
+//         (console.log(w, "is NOT a palindrome"))
+//     }
+// }
+
+// PalindromeCheck("happy")

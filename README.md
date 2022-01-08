@@ -79,3 +79,9 @@ Problem Solving With Arrays
 23.	Write a method that rotates a list by k elements. You input a value for k that represents how many places in the array you want to rotate by. For example, if k is rotated by 2, [1,2,3,4,5,6] becomes [3,4,5,6,1,2]. Try solving this without creating a copy of the array. How many swap or move operations do you need?
 
 24.	Write methods that add, subtract, and multiply two numbers in their digit-array representation (and return a new digit list). If you’re ambitious you can implement Karatsuba multiplication. Try different bases. What is the best base if you care about speed?
+
+EXTRA
+HackerRanker problem
+write a Degree of an Array where you intake an array. 
+in the array you find the most frequent numbers (deg. of array)
+find length of the shortest sub array that shares that degree. 
