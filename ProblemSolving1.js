@@ -287,7 +287,6 @@ function PalindromeCheck(w){
 //find lowest number 
 
 function findLowestNumber(arr){
-    debugger
     let lowestNumber = 0;
 
     for (let i = 0; i < arr.length; i++){
@@ -304,21 +303,38 @@ function findLowestNumber(arr){
 function highestToLowestNumberArray (arr){
     let lowestNumber = findLowestNumber(arr);
     let lastNumber = 0;
+    let count = 0;
     let newsequence = []
-  
+  debugger
     newsequence.push(lowestNumber)
-
+while (count < 100)
     for (let i = 0; i<arr.length; i++){
-        if (newsequence.includes(arr[i])){
-            newsequence.push(arr[i])
+
+        if (arr[i] == lowestNumber + 1 && !newsequence.includes(arr[i])){
+            newsequence.push(arr[i]);
+            lastNumber = arr[i];
+            count++
         }
-        else if (arr[i] == lowestNumber+1){
-            newsequence.push(arr[i])
-            lastNumber = arr[i]
+        else if (arr[i] == lastNumber + 1){
+            newsequence.push(arr[i]);
+            lastNumber = arr[i];
+            count++
         }
-        // else if (arr[i] == )
+        else{
+            count++
+        }
     }
+    if (newsequence.length === arr.length){
+        console.log ("True : This set of numbers can form a list of sequental numbers ")
+    }
+    else {
+        console.log ("False")
+    }
+    
 }
 
 let randomNumbers = [5, 7, 3, 8, 6]
 let moreRandomNumbers = [17, 15, 20, 19, 21, 16, 18]
+
+highestToLowestNumberArray(randomNumbers);
+highestToLowestNumberArray(moreRandomNumbers);
