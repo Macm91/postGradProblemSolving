@@ -300,12 +300,12 @@ function findLowestNumber(arr){
     return (lowestNumber)
 }
 
-function highestToLowestNumberArray (arr){
+function sequentialOrderOfNumbersPotentialValidation (arr){
     let lowestNumber = findLowestNumber(arr);
     let lastNumber = 0;
     let count = 0;
     let newsequence = []
-  debugger
+  
     newsequence.push(lowestNumber)
 while (count < 100)
     for (let i = 0; i<arr.length; i++){
@@ -336,5 +336,5 @@ while (count < 100)
 let randomNumbers = [5, 7, 3, 8, 6]
 let moreRandomNumbers = [17, 15, 20, 19, 21, 16, 18]
 
-highestToLowestNumberArray(randomNumbers);
-highestToLowestNumberArray(moreRandomNumbers);
+sequentialOrderOfNumbersPotentialValidation(randomNumbers);
+sequentialOrderOfNumbersPotentialValidation(moreRandomNumbers);
