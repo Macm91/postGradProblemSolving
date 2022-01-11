@@ -301,7 +301,24 @@ function findLowestNumber(arr){
     return (lowestNumber)
 }
 
+function highestToLowestNumberArray (arr){
+    let lowestNumber = findLowestNumber(arr);
+    let lastNumber = 0;
+    let newsequence = []
+  
+    newsequence.push(lowestNumber)
 
+    for (let i = 0; i<arr.length; i++){
+        if (newsequence.includes(arr[i])){
+            newsequence.push(arr[i])
+        }
+        else if (arr[i] == lowestNumber+1){
+            newsequence.push(arr[i])
+            lastNumber = arr[i]
+        }
+        // else if (arr[i] == )
+    }
+}
 
 let randomNumbers = [5, 7, 3, 8, 6]
 let moreRandomNumbers = [17, 15, 20, 19, 21, 16, 18]
