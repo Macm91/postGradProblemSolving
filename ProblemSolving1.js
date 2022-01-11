@@ -276,3 +276,32 @@ function PalindromeCheck(w){
 }
 
 // PalindromeCheck("madam")
+
+
+// 10.	Given a list of integers, return a bool that represents whether 
+//or not all integers in the list can form a sequence of incrementing integers
+// a.	Use case: 
+// i.	{5, 7, 3, 8, 6}  false (no 4 to complete the sequence)
+// ii.	{17, 15, 20, 19, 21, 16, 18}  true
+
+//find lowest number 
+
+function findLowestNumber(arr){
+    debugger
+    let lowestNumber = 0;
+
+    for (let i = 0; i < arr.length; i++){
+        if (i === 0){
+            lowestNumber = arr[i]
+        }
+        else if(arr[i] < lowestNumber){
+            lowestNumber = arr[i]
+        }
+    }
+    return (lowestNumber)
+}
+
+
+
+let randomNumbers = [5, 7, 3, 8, 6]
+let moreRandomNumbers = [17, 15, 20, 19, 21, 16, 18]
