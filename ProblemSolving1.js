@@ -280,12 +280,6 @@ function PalindromeCheck(w){
 
 // 10.	Given a list of integers, return a bool that represents whether 
 //or not all integers in the list can form a sequence of incrementing integers
-// a.	Use case: 
-// i.	{5, 7, 3, 8, 6}  false (no 4 to complete the sequence)
-// ii.	{17, 15, 20, 19, 21, 16, 18}  true
-
-//find lowest number 
-
 function findLowestNumber(arr){
     let lowestNumber = 0;
 
@@ -333,8 +327,70 @@ while (count < 100)
     
 }
 
-let randomNumbers = [5, 7, 3, 8, 6]
-let moreRandomNumbers = [17, 15, 20, 19, 21, 16, 18]
+// let randomNumbers = [5, 7, 3, 8, 6]
+// let moreRandomNumbers = [17, 15, 20, 19, 21, 16, 18]
+// sequentialOrderOfNumbersPotentialValidation(randomNumbers);
+// sequentialOrderOfNumbersPotentialValidation(moreRandomNumbers);
 
-sequentialOrderOfNumbersPotentialValidation(randomNumbers);
-sequentialOrderOfNumbersPotentialValidation(moreRandomNumbers);
+
+
+
+// ######### PROBLEM FROM A WHITE BOARDING PRACTICE LECTURE ######
+//ANAGRAM PROBLEM
+
+function anagram (wordOne, wordTwo){
+
+    if (wordOne.length !== wordTwo.length){
+        console.log (wordOne, "and", wordTwo, "are NOT anagrams")
+    }
+    else{
+    let wordArrOne = splitWordIntoArray(wordOne);
+    let wordArrTwo = splitWordIntoArray(wordTwo);
+    let eliminatedArrays = eliminateMatchingVariableFromArrays(wordArrOne, wordArrTwo);
+
+        if (eliminatedArrays=[]){
+            console.log (wordOne, " and ", wordTwo, "are anagrams of each other.")
+        }
+        else{
+            console.log (wordOne, "and", wordTwo, "are NOT anagrams")
+        }
+}
+}
+
+function splitWordIntoArray (word){
+    let wordArr =[];
+    for (let i = 0; i <= word.length-1; i++){
+        wordArr.push(word[i]);
+    }
+    return(wordArr);
+}
+
+function eliminateMatchingVariableFromArrays (arrOne, arrTwo){
+    for (let i = 0; i <= arrOne.length; i++){
+        for (let j = 0; j <= arrTwo.length; j++){
+            if (arrOne[i] === arrTwo[j] && arrTwo.length === 1 && arrTwo.length ===1){
+                return ([]);
+                break
+            }
+            else if (arrOne[i] === arrTwo[j]){
+                arrOne.splice([i],1);
+                arrTwo.splice([j],1);
+            }
+        }
+    }
+   
+    console.log(arrOne, "Array one.   ", arrTwo, "array 2.");
+    return (arrOne);
+}
+
+anagram("taco", "cato");
+anagram ("atm", "mta");
+anagram ("cat", "crab");
+
+
+// 11.	Create a method that takes an array of positive and negative numbers.
+//  Return an array where the first element is the count of the 
+//  positive numbers and the second element is the sum of negative numbers. 
+// a.	Use case: [7, 9, -3, -32, 107, -1, 36, 95, -14, -99, 21]
+
+
