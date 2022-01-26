@@ -383,23 +383,20 @@ function eliminateMatchingVariableFromArrays (arrOne, arrTwo){
     return (arrOne);
 }
 
-anagram("taco", "cato");
-anagram ("atm", "mta");
-anagram ("cat", "crab");
-
 
 // 11.	Create a method that takes an array of positive and negative numbers.
 //  Return an array where the first element is the count of the 
 //  positive numbers and the second element is the sum of negative numbers. 
 // a.	Use case: [7, 9, -3, -32, 107, -1, 36, 95, -14, -99, 21]
 
+let arr = [7, 9, -3, -32, 107, -1, 36, 95, -14, -99, 21]
 
 function posAndNegNumArr(arr){
     let sumOfNeg = 0;
     let posNumCount = 0;
     let returnArr = []
-    for (i=0; i <= arr.length; i++){
-        if (arr[i].includes("-")){
+    for (let i=0; i <= arr.length; i++){
+        if (arr[i] < 0){
             sumOfNeg += arr[i]
         }
         else {
@@ -410,3 +407,5 @@ function posAndNegNumArr(arr){
     returnArr.push(sumOfNeg)
     console.log(returnArr)
 }
+
+posAndNegNumArr(arr)
