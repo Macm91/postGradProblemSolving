@@ -394,3 +394,19 @@ anagram ("cat", "crab");
 // a.	Use case: [7, 9, -3, -32, 107, -1, 36, 95, -14, -99, 21]
 
 
+function posAndNegNumArr(arr){
+    let sumOfNeg = 0;
+    let posNumCount = 0;
+    let returnArr = []
+    for (i=0; i <= arr.length; i++){
+        if (arr[i].includes("-")){
+            sumOfNeg += arr[i]
+        }
+        else {
+            posNumCount ++
+        }
+    }
+    returnArr.push(posNumCount)
+    returnArr.push(sumOfNeg)
+    console.log(returnArr)
+}
