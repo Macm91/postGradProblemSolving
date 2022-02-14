@@ -408,4 +408,23 @@ function posAndNegNumArr(arr){
     console.log(returnArr)
 }
 
-posAndNegNumArr(arr)
+// posAndNegNumArr(arr)
+
+
+// 12.	Write a method that prints the next 20 leap years.
+
+
+function leapYears(){
+    let nextLeapYear = 2024
+    let leapYears = [2024]
+    let count = 0
+
+    while (count <20){
+        leapYears.push(nextLeapYear + 4)
+        nextLeapYear += 4
+        count++
+    }
+    console.log(leapYears)
+}
+
+leapYears();
