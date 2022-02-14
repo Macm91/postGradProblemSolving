@@ -415,8 +415,8 @@ function posAndNegNumArr(arr){
 
 
 function leapYears(){
-    let nextLeapYear = 2024
-    let leapYears = [2024]
+    let nextLeapYear = leapYearNext20()
+    let leapYears = [nextLeapYear, ]
     let count = 0
 
     while (count <20){
