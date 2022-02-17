@@ -427,7 +427,7 @@ function leapYears(){
     console.log(leapYears)
 }
 
-leapYears();
+// leapYears();
 
 function leapYearNext40(){
     let next40LeapYears = [2024, 2028, 2032, 2036, 2040, 2044, 2048, 2052, 2056, 2060, 2064, 2068, 2072, 2076, 2080, 2084, 2088, 2092, 2096, 2100, 2104, 2108, 2112, 2116, 2120, 2124, 2128, 2132, 2136, 2140, 2144, 2148, 2152, 2156, 2160, 2164, 2168, 2172, 2176, 2180, 2184];
@@ -441,8 +441,35 @@ function leapYearNext40(){
         }
     }
     return (nextLeapYear);
-   
-
 }
 
-leapYearNext20();
+
+// A QUESTION I BOMBED DURING AN INTERVIEW
+// USING THE RECURSION METHOD: write a function that will add 1, 2 & 3. 
+
+function addNumbers(number){
+    let newNumber = number;
+    let sum = 0;
+
+    while(newNumber >= 0){
+        if(newNumber == 0){
+            console.log(sum);
+            break;
+        }    
+        else if (newNumber == number){
+            newNumber = number -1;
+            sum = number + newNumber;
+        }
+        else {
+            newNumber --;
+            sum += newNumber
+        }
+    }
+}
+
+addNumbers(2)
+
+
+
+// 13.	Write a method that finds the longest palindromic substring of a given string.
+
