@@ -467,9 +467,23 @@ function addNumbers(number){
     }
 }
 
-addNumbers(2)
+function addDescendingNumbers(number){
+    let newNumber = number;
+    let sum = newNumber;
+
+        newNumber --;
+        sum += newNumber
+
+        if (newNumber != 0){
+           sum += addDescendingNumbers((newNumber-1))
+        }
+
+    console.log(sum)
+    return(sum)
+}
 
 
+addDescendingNumbers(3)
 
 // 13.	Write a method that finds the longest palindromic substring of a given string.
 
