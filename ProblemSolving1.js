@@ -12,6 +12,13 @@ function reverseString(str){
 reverseString("hello")
 reverseString("hi")
 
+function reverseStringBetter(str){
+	const ans = s.split('').reverse().join('');
+	console.log(ans);
+}
+
+reverseStringBetter("OLLEH")
+
 // 2. Capitalize letter
 function capitalize(x){
     let finalPhrase = '';
